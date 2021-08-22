@@ -31,12 +31,8 @@ async def 역할(ctx):
         ],
     )
 
-    def check(res):
-        return ctx.author == res.user and res.channel == ctx.channel
-        lambda inter: inter.custom_id == "selecter"
-
     interaction = await bot.wait_for(
-        "select_option", check=check
+        "select_option", check=lambda inter: inter.custom_id == "selecter"
     )
 
     if interaction.values[0] == "1":
