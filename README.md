@@ -1,1 +1,1 @@
-# discord-select
+알아서수정하새요👏👏
